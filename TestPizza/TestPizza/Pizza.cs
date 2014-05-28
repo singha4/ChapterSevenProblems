@@ -8,7 +8,8 @@ namespace TestPizza
     class Pizza
     {
         private string toppings;
-
+        private double diameter;
+        private double price;
         public Pizza(double Diameter)
         {
             this.Diameter = Diameter;
