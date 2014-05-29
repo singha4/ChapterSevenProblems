@@ -7,19 +7,25 @@ namespace TestCircles
 {
     class Circle
     {
-        private double radius = 1;
+        private double radius;
         private double diameter;
         private double area;
-        
+
+        public Circle()
+        {
+            radius = 1;
+        }
         public double Radius
         {
             get
             {
-                return diameter / 2;
+                return radius;
             }
             set
             {
                 radius = value;
+                diameter = radius * 2;
+                area = Math.PI * radius * radius;
             }
         }
 
@@ -27,11 +33,7 @@ namespace TestCircles
         {
             get
             {
-                return radius * 2;
-            }
-            set
-            {
-                diameter = value;
+                return diameter;
             }
         }
 
@@ -39,11 +41,7 @@ namespace TestCircles
         {
             get
             {
-                return Math.PI * radius * radius;
-            }
-            set
-            {
-                area = value;
+                return area;
             }
         }
     }
